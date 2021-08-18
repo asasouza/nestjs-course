@@ -1,0 +1,7 @@
+@hostname = http://localhost:3000
+
+GET {{hostname}}/app/hi
+
+###
+
+GET {{hostname}}/app/bye
