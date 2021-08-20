@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/asasouza/nestjs-course/issues"
   },
-  "homepage": "https://github.com/asasouza/nestjs-course#readme"
+  "homepage": "https://github.com/asasouza/nestjs-course#readme",
+  "devDependencies": {
+    "@nestjs/cli": "^8.1.1"
+  }
 }

@@ -1,0 +1,29 @@
+{
+  "monorepo": true,
+  "root": "apps/nestjs-course",
+  "sourceRoot": "apps/nestjs-course/src",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nestjs-course/tsconfig.app.json"
+  },
+  "projects": {
+    "nestjs-course": {
+      "type": "application",
+      "root": "apps/nestjs-course",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-course/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-course/tsconfig.app.json"
+      }
+    },
+    "messages": {
+      "type": "application",
+      "root": "apps/messages",
+      "entryFile": "main",
+      "sourceRoot": "apps/messages/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/messages/tsconfig.app.json"
+      }
+    }
+  }
+}

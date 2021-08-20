@@ -1,0 +1,17 @@
+@hostname = http://localhost:3000
+@controller = messages
+
+GET {{hostname}}/{{controller}}
+
+###
+
+POST {{hostname}}/{{controller}}
+Content-Type: application/json
+
+{
+    "content": "hi there"
+}
+
+###
+
+GET {{hostname}}/{{controller}}/1
