@@ -5,6 +5,10 @@ GET {{hostname}}/{{controller}}
 
 ###
 
+GET {{hostname}}/{{controller}}/12
+
+###
+
 POST {{hostname}}/{{controller}}
 Content-Type: application/json
 
@@ -14,4 +18,3 @@ Content-Type: application/json
 
 ###
 
-GET {{hostname}}/{{controller}}/1
