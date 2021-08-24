@@ -1,0 +1,10 @@
+@hostname = http://localhost:3000
+
+### Create a new user
+POST {{hostname}}/users/signup
+Content-Type: application/json
+
+{
+    "email": "charles@xmn.cc",
+    "password": "qwer1234"
+}
