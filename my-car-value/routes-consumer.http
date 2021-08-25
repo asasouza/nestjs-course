@@ -8,3 +8,20 @@ Content-Type: application/json
     "email": "charles@xmn.cc",
     "password": "qwer1234"
 }
+
+### Find a user with an ID
+GET {{hostname}}/users/2
+
+### Find all users with a given eamil
+GET {{hostname}}/users?email=charles@xmn.cc
+
+### Delete a user with an ID
+DELETE {{hostname}}/users/1
+
+### Update a user
+PATCH {{hostname}}/users/1
+Content-Type: application/json
+
+{
+    "email": "hank@xmn.cc"
+}
