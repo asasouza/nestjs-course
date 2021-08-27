@@ -1,7 +1,9 @@
 @hostname = http://localhost:3000
 
+### USERS CONTROLLER 
+@users_controller = /users
 ### Create a new user
-POST {{hostname}}/users/signup
+POST {{hostname}}{{users_controller}}/signup
 Content-Type: application/json
 
 {
@@ -10,18 +12,39 @@ Content-Type: application/json
 }
 
 ### Find a user with an ID
-GET {{hostname}}/users/2
+GET {{hostname}}{{users_controller}}/2
 
 ### Find all users with a given eamil
-GET {{hostname}}/users?email=charles@xmn.cc
+GET {{hostname}}{{users_controller}}?email=charles@xmn.cc
 
 ### Delete a user with an ID
-DELETE {{hostname}}/users/1
+DELETE {{hostname}}{{users_controller}}/1
 
 ### Update a user
-PATCH {{hostname}}/users/1
+PATCH {{hostname}}{{users_controller}}/1
 Content-Type: application/json
 
 {
     "email": "hank@xmn.cc"
+}
+
+### AUTH CONTROLLER
+
+@auth_controller = /auth
+### Cria um usuario com senha hasheada
+POST {{hostname}}{{auth_controller}}
+Content-Type: application/json
+
+{
+    "email": "hank.mcoy4@xmn.cc",
+    "password": "qwer1234"
+}
+
+### Autentica o usuario
+POST {{hostname}}{{auth_controller}}/authenticate
+Content-Type: application/json
+
+{
+    "email": "hank.mcoy2@xmn.cc",
+    "password": "qwer1234"
 }
