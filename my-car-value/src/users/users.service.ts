@@ -23,6 +23,9 @@ export class UsersService {
   }
 
   async findOne(userId: number): Promise<User> {
+    if (!userId) {
+      return null;
+    }
     const user = this.usersRepository.findOne(userId);
     if(!user) {
         // Lancar excecoes deste tipo dentro do Service pode nao ser

@@ -48,3 +48,9 @@ Content-Type: application/json
     "email": "hank.mcoy2@xmn.cc",
     "password": "qwer1234"
 }
+
+### Desloga o usuario
+POST {{hostname}}{{auth_controller}}/signout
+
+### Mostra o id do usuario logado
+GET {{hostname}}{{auth_controller}}/whoami

@@ -46,4 +46,8 @@ export class AuthService {
         }
         return user;
     }
+
+    async whoAmI(userId: number): Promise<User> {
+        return this.userService.findOne(userId);
+    }
 }
