@@ -7,7 +7,7 @@ describe('Auth Domain E2E', () => {
   let app: INestApplication;
   let request: supertest.SuperTest<supertest.Test>;
 
-  beforeAll(async () => {
+  beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
@@ -28,14 +28,14 @@ describe('Auth Domain E2E', () => {
 
   it('/auth (POST)', async () => {
     // Given
-    const data = { email: 'user3@email.com', password: 'qwer1234' };
+    const data = { email: 'user5@email.com', password: 'qwer1234' };
 
     // When
     const { status, body, header } = await request.post('/auth').send(data);
     
     // Then
     const { id, email } = body;
-    
+
     expect(status).toBe(201);
     expect(id).toBeDefined();
     expect(email).toBe(data.email);
