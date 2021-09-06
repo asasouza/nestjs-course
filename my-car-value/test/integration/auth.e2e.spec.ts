@@ -40,4 +40,21 @@ describe('Auth Domain E2E', () => {
     expect(id).toBeDefined();
     expect(email).toBe(data.email);
   });
+
+  it('/auth/whoami (POST)', async () => {
+    // Given
+    const data = { email: 'user5@email.com', password: 'qwer1234' };
+
+    const res = await request.post('/auth').send(data).expect(201);
+  
+    const cookie = res.get('Set-Cookie');
+
+    // When
+    const { body } = await request.get('/auth/whoami').set('Cookie', cookie).expect(200);
+
+    // Then
+    expect(body.email).toBe(data.email);
+
+
+  })
 });
