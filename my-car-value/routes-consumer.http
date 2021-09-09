@@ -36,7 +36,7 @@ POST {{hostname}}{{auth_controller}}
 Content-Type: application/json
 
 {
-    "email": "hank.mcoy4@xmn.cc",
+    "email": "hank.mcoy@xmn.cc",
     "password": "qwer1234"
 }
 
@@ -45,7 +45,7 @@ POST {{hostname}}{{auth_controller}}/authenticate
 Content-Type: application/json
 
 {
-    "email": "hank.mcoy2@xmn.cc",
+    "email": "hank.mcoy@xmn.cc",
     "password": "qwer1234"
 }
 
@@ -54,3 +54,20 @@ POST {{hostname}}{{auth_controller}}/signout
 
 ### Mostra o id do usuario logado
 GET {{hostname}}{{auth_controller}}/whoami
+
+### REPORT CONTROLLER
+@report_controller = /reports
+
+### Cria um report
+POST {{hostname}}{{report_controller}}
+Content-Type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 1990,
+    "mileage": 1000,
+    "lng": 0,
+    "lat": 0,
+    "price": 500000
+}
