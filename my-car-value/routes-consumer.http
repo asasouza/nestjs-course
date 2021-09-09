@@ -79,3 +79,6 @@ Content-Type: application/json
 {
     "approve": true
 }
+
+### Get an estimate report
+GET {{hostname}}{{report_controller}}?make=toyota&model=corolla&lat=0&lng=0&year=1980&mileage=2000
