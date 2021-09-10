@@ -81,4 +81,4 @@ Content-Type: application/json
 }
 
 ### Get an estimate report
-GET {{hostname}}{{report_controller}}?make=toyota&model=corolla&lat=0&lng=0&year=1980&mileage=2000
+GET {{hostname}}{{report_controller}}?make=toyota&model=corolla&lat=0&lng=0&year=1990&mileage=1000

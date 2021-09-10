@@ -1,3 +1,4 @@
+import { Transform } from 'class-transformer';
 import {
   IsLatitude,
   IsLongitude,
@@ -9,9 +10,11 @@ import {
 
 export class CreateReportDTO {
   @IsString()
+  @Transform(({ value }) => value.toLowerCase())
   make: string;
 
   @IsString()
+  @Transform(({ value }) => value.toLowerCase())
   model: string;
 
   @IsNumber()

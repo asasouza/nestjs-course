@@ -1,12 +1,15 @@
 import { Expose, Transform } from 'class-transformer';
+import { capitalize } from '../../utils/capitalize';
 
 export class ReportDTO {
   @Expose()
   id: number;
   
+  @Transform(({ obj }) => capitalize(obj.make))
   @Expose()
   make: string;
 
+  @Transform(({ obj }) => capitalize(obj.model))
   @Expose()
   model: string;
 
