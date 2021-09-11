@@ -18,7 +18,7 @@ import { ReportDTO } from './dto/report.dto';
 import { Report } from './report.entity';
 import { ReportsService } from './reports.service';
 import { ApproveReportDTO } from './dto/approve-report.dto';
-import { AdminGuard } from 'src/guards/admin.guard';
+import { AdminGuard } from '../guards/admin.guard';
 import { GetEstimateDTO } from './dto/get-estimate.dto';
 
 @Controller('reports')
