@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "cd my-car-value && npm run prebuild",
     "build": "cd my-car-value && npm install && npm run build",
-    "start": "cd my-car-value && npm run start:prod",
+    "start:prod": "cd my-car-value && npm run start:prod",
     "start:dev": "cd my-car-value && npm run start:dev"
   },
   "repository": {
